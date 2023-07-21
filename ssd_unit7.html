@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<!--
+	Forty by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+  <head>
+    <title>Unit 7</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, user-scalable=no"
+    />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript
+      ><link rel="stylesheet" href="assets/css/noscript.css"
+    /></noscript>
+  </head>
+  <body class="is-preload">
+    <!-- Wrapper -->
+    <div id="wrapper">
+      <!-- Header -->
+      <!-- Note: The "styleN" class below should match that of the banner element. -->
+      <header id="header" class="alt style2">
+        <a href="index.html" class="logo"
+          ><strong>Haaris</strong> <span>Mian</span></a
+        >
+        <nav>
+          <a href="#menu">Menu</a>
+        </nav>
+      </header>
+
+      <!-- Menu -->
+      <nav id="menu">
+        <ul class="links">
+          <li><a href="index.html">Home</a></li>
+          <li>
+            <a href="objectorientedprogramming.html"
+              >Object Oriented Programming</a
+            >
+          </li>
+          <li>
+            <a href="securesoftwaredevelopment.html"
+              >Secure Software Development</a
+            >
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Banner -->
+      <!-- Note: The "styleN" class below should match that of the header element. -->
+      <section id="banner" class="style2">
+        <div class="inner">
+          <span class="image">
+            <img src="images/pic07.jpg" alt="" />
+          </span>
+          <header class="major">
+            <h1>Unit 7</h1>
+          </header>
+          <div class="content">
+            <h2>Learning Objectives</h2>
+            <ul>
+              <li>
+                Articulate strategies to enhance the security of operating
+                systems.
+              </li>
+              <li>
+                Discuss the primary risks and vulnerabilities inherent in
+                operating systems.
+              </li>
+              <li>
+                Delineate the differences between static and dynamic libraries
+                and discern when to utilise each.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Main -->
+      <div id="main">
+        <!-- One -->
+        <section id="one" class="spotlights">
+          <section>
+            <a href="generic.html" class="image">
+              <img
+                src="images/pic08.jpg"
+                alt=""
+                data-position="center center"
+              />
+            </a>
+            <div class="content">
+              <div class="inner">
+                <header class="major">
+                  <h3>
+                    Reflections of the activity and course learning objectives
+                  </h3>
+                </header>
+                <p>
+                  Reflecting on this week's unit on Introduction to Operating
+                  Systems, I am intrigued by the broad scope and profound
+                  influence that operating systems have on both user
+                  applications and system security. It's enlightening to learn
+                  about how various aspects of an operating system, such as
+                  processes, threads, and schedulers, operate, and how they
+                  collectively contribute to the functionality of the system.
+                  The security component of the unit was especially
+                  enlightening, and I am now aware of the importance of properly
+                  securing operating systems to safeguard against potential
+                  vulnerabilities. The exploration of static and dynamic
+                  libraries also provided me with a deeper understanding of how
+                  applications interact with the OS. This newfound knowledge is
+                  not just academic, it has practical implications and will
+                  influence my approach to software development and system
+                  security in the future.
+                </p>
+              </div>
+            </div>
+          </section>
+        </section>
+
+        <!-- One -->
+        <section id="one">
+          <div class="inner">
+            <header class="major">
+              <h2>e-Portfolio activities</h2>
+            </header>
+            <h1>What is an ontology?</h1>
+            <p>
+              An ontology is like a structured map or blueprint that helps
+              computers and people understand a particular topic or subject
+              area. It defines the important concepts, their relationships, and
+              properties within that area, making it easier for machines to work
+              with and reason about the information related to that topic. It's
+              like a shared language that enables different systems to
+              communicate and share knowledge effectively.
+            </p>
+            <h1>
+              Could you attempt to define an ontology that would be relevant to
+              the system that you are designing for the summative assessment?
+            </h1>
+            <p>
+              From my understanding, the entirety of the design document is an
+              ontology. The document maps out the business use cases, the
+              different APIs and the different actors and relationships within
+              the system
+            </p>
+            <h1>CODIO activity</h1>
+            <img
+              src="https://github.com/haarismian/haarismian-eportfolio/assets/13083798/bd55dba2-e093-445a-b34e-ec354c6f28fb"
+              alt=""
+            />
+            <h1>What are the two main security vulnerabilities with your shell?</h1>
+<p>The two main security vulnerabilities with the shell script are: 
+    <ol>
+        <li><b>Command Injection:</b> Even though this particular shell only implements four commands (LIST, ADD, HELP, EXIT), a more sophisticated shell might allow users to execute arbitrary commands. If user inputs aren't properly sanitized, this could lead to command injection attacks where malicious commands are executed.</li>
+        <li><b>Lack of Authentication:</b> Currently, the shell does not implement any sort of authentication or access control. In a real-world application, this could allow unauthorized users to execute commands, potentially exposing sensitive system information or manipulating system files.</li>
+    </ol>
+</p>
+
+<h1>What is one recommendation you would make to increase the security of the shell?</h1>
+<p>A simple way to increase the security of the shell would be to implement some form of <b>authentication or access control</b>. This would prevent unauthorized users from executing commands. It would also be wise to sanitize any user input to prevent command injection attacks.</p>
+
+<h1>Add a section to your e-portfolio that provides a (pseudo)code example of changes you would make to the shell to improve its security.</h1>
+<p>Here's an example of how we might add some rudimentary authentication to our shell:
+    <pre><code>
+    import getpass
+
+    USERS = {'admin': 'password'}
+
+    def authenticate():
+        username = input("Username: ")
+        password = getpass.getpass("Password: ")
+        if USERS.get(username) != password:
+            print("Invalid credentials.")
+            return False
+        return True
+
+    def cli():
+        if not authenticate():
+            return
+        # The rest of the cli function here...
+    </code></pre>
+    In this code, the function `authenticate` prompts the user for a username and password before allowing them to access the shell. Note that the passwords are not stored securely in this example. In a real application, you'd want to hash and salt the passwords, and possibly use a more secure method of prompting for the password.
+</p>
+
+          </div>
+        </section>
+
+        <!-- Contact -->
+        <section id="contact">
+          <div class="inner">
+            <section>
+              <form method="post" action="#">
+                <div class="fields">
+                  <div class="field half">
+                    <label for="name">Name</label>
+                    <input type="text" name="name" id="name" />
+                  </div>
+                  <div class="field half">
+                    <label for="email">Email</label>
+                    <input type="text" name="email" id="email" />
+                  </div>
+                  <div class="field">
+                    <label for="message">Message</label>
+                    <textarea name="message" id="message" rows="6"></textarea>
+                  </div>
+                </div>
+                <ul class="actions">
+                  <li>
+                    <input type="submit" value="Send Message" class="primary" />
+                  </li>
+                  <li><input type="reset" value="Clear" /></li>
+                </ul>
+              </form>
+            </section>
+            <section class="split">
+              <section>
+                <div class="contact-method">
+                  <span class="icon solid alt fa-envelope"></span>
+                  <h3>Email</h3>
+                  <a href="#">mail@haarismian.com</a>
+                </div>
+              </section>
+            </section>
+          </div>
+        </section>
+
+        <!-- Footer -->
+        <footer id="footer">
+          <div class="inner">
+            <ul class="icons">
+              <li></li>
+
+              <li>
+                <a
+                  href="https://github.com/haarismian"
+                  class="icon brands alt fa-github"
+                  ><span class="label">GitHub</span></a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://www.linkedin.com/in/haarismian/"
+                  class="icon brands alt fa-linkedin-in"
+                  ><span class="label">LinkedIn</span></a
+                >
+              </li>
+            </ul>
+            <ul class="copyright">
+              <li>&copy; Untitled</li>
+              <li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
+            </ul>
+          </div>
+        </footer>
+      </div>
+
+      <!-- Scripts -->
+      <script src="assets/js/jquery.min.js"></script>
+      <script src="assets/js/jquery.scrolly.min.js"></script>
+      <script src="assets/js/jquery.scrollex.min.js"></script>
+      <script src="assets/js/browser.min.js"></script>
+      <script src="assets/js/breakpoints.min.js"></script>
+      <script src="assets/js/util.js"></script>
+      <script src="assets/js/main.js"></script>
+    </div>
+  </body>
+</html>
