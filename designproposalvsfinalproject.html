@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<!--
+	Forty by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+  <head>
+    <title>NCSC Design vs Final</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, user-scalable=no"
+    />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript
+      ><link rel="stylesheet" href="assets/css/noscript.css"
+    /></noscript>
+  </head>
+  <body class="is-preload">
+    <!-- Wrapper -->
+    <div id="wrapper">
+      <!-- Header -->
+      <!-- Note: The "styleN" class below should match that of the banner element. -->
+      <header id="header" class="alt style2">
+        <a href="index.html" class="logo"
+          ><strong>Haaris</strong> <span>Mian</span></a
+        >
+        <nav>
+          <a href="#menu">Menu</a>
+        </nav>
+      </header>
+
+      <!-- Menu -->
+      <nav id="menu">
+        <ul class="links">
+          <li><a href="index.html">Home</a></li>
+          <li>
+            <a href="objectorientedprogramming.html"
+              >Object Oriented Programming</a
+            >
+          </li>
+          <li>
+            <a href="securesoftwaredevelopment.html"
+              >Secure Software Development</a
+            >
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Banner -->
+      <!-- Note: The "styleN" class below should match that of the header element. -->
+      <section id="banner" class="style2">
+        <div class="inner">
+          <span class="image">
+            <img src="images/pic07.jpg" alt="" />
+          </span>
+          <header class="major">
+            <h1>Final project vs design document evaluation</h1>
+          </header>
+        </div>
+      </section>
+      <section id="one">
+        <div class="inner">
+          <div></div>
+        </div>
+      </section>
+      <section id="one">
+        <div class="inner">
+          <div>
+            <h1>Comparative Analysis of Design Document and Final Project</h1>
+            <h2>Purpose</h2>
+            <p>
+              The purpose of this analysis is to examine the changes that
+              happened in the development process, how and why they occurred,
+              and to explain how such modifications are typical in the software
+              development lifecycle.
+            </p>
+            <h2>1. Frontend Development</h2>
+            <p>
+              Initially, the design document specified the use of React for
+              frontend development. React is a popular JavaScript library for
+              building user interfaces, particularly single-page applications.
+              However, during the development phase, the team switched to Django
+              templates, which use a syntax the team was more familiar with,
+              HTML. Django is a high-level Python Web framework that encourages
+              rapid development and clean, pragmatic design (Django, 2023). This
+              switch can be attributed to a common phenomenon in software
+              development where the chosen technology stack may change based on
+              the team's expertise and familiarity with the tools.
+            </p>
+            <h2>2. Database Systems</h2>
+            <p>
+              The design document indicated the use of PostgreSQL as the
+              database system. PostgreSQL is a powerful, open-source
+              object-relational database system with over 30 years of active
+              development that has earned it a strong reputation for
+              reliability, feature robustness, and performance (PostgreSQL,
+              2023). However, during the development, the team decided to use
+              SQLite databases. This switch was likely due to SQLite's
+              simplicity and ease of setup compared to PostgreSQL. SQLite
+              databases are serverless and self-contained, which can be
+              beneficial for development and testing environments (SQLite,
+              2023). To ensure the security of data, the team utilized the
+              Django-Cryptography package, which uses Fernet algorithms for
+              encrypting the SQLite databases.
+            </p>
+            <h2>3. Inter-Service Communication</h2>
+            <p>
+              Originally, the design document proposed the use of a messaging
+              queue for inter-service communication. However, in the final
+              implementation, the application communicated between services
+              using RESTful API calls. This change could have been due to the
+              increased complexity of implementing a messaging queue or the
+              additional overhead it may add to the system. RESTful APIs provide
+              a straightforward and efficient way for services to communicate
+              with each other, and they are widely used in web development
+              (Fielding and Taylor, 2002).
+            </p>
+            <h2>4. Deployment</h2>
+            <p>
+              The design document specified that the application would be
+              deployed remotely. However, due to the complexity of deployment
+              and the time constraint, the team decided to deploy the
+              application locally. This change is not uncommon in software
+              development, particularly in projects with tight deadlines or
+              where the primary aim is to validate functionality rather than
+              assess performance at scale.
+            </p>
+            <h2>5. Monitoring</h2>
+            <p>
+              Initially, AWS CloudWatch was to be used for monitoring according
+              to the design document. However, due to the application being
+              deployed locally, Django's built-in logger was used instead. AWS
+              CloudWatch is a comprehensive monitoring service for AWS resources
+              and applications, while Django's logger allows for the collection
+              of system logs, information about server errors, and more (AWS,
+              2023; Django, 2023). The choice of monitoring tool often depends
+              on the deployment environment, and in this case, a local
+              deployment favored the use of Django's built-in logger.
+            </p>
+            <h2>6. Business and Non-Functional Requirements</h2>
+            <p>
+              Despite these changes, the team was able to successfully implement
+              all business and non-functional requirements. This outcome shows
+              that while the technology stack and deployment methods may have
+              changed, the core functionality and performance requirements of
+              the software remained consistent with the original design
+              document.
+            </p>
+            <h2>Conclusion</h2>
+            <p>
+              In conclusion, the changes observed in the development of the
+              software system for the Dutch National Cybersecurity Centre
+              demonstrate that software design is a dynamic process. Design
+              documents serve as blueprints, but they often evolve based on
+              project constraints, the development team's expertise, and other
+              factors (Parnas and Clements, 1986).
+            </p>
+            <h2>References</h2>
+            <p class="references">
+              AWS. (2023). Amazon CloudWatch – Monitoring for AWS Cloud
+              Resources and Applications. Amazon Web Services, Inc. Available
+              at: https://aws.amazon.com/cloudwatch/ (Accessed: 21 July 2023).
+            </p>
+            <p class="references">
+              Django. (2023). Django makes it easier to build better Web apps
+              more quickly and with less code. Django Software Foundation.
+              Available at: https://www.djangoproject.com/ (Accessed: 21 July
+              2023).
+            </p>
+            <p class="references">
+              Fielding, R. and Taylor, R. (2002). Principled Design of the
+              Modern Web Architecture. ACM Transactions on Internet Technology,
+              2(2), pp.115–150.
+            </p>
+            <p class="references">
+              Parnas, D. and Clements, P. (1986). A rational design process: How
+              and why to fake it. IEEE Transactions on Software Engineering,
+              SE-12(2), pp.251-257.
+            </p>
+            <p class="references">
+              PostgreSQL. (2023). PostgreSQL: The world's most advanced open
+              source database. PostgreSQL Global Development Group. Available
+              at: https://www.postgresql.org/ (Accessed: 21 July 2023).
+            </p>
+            <p class="references">
+              SQLite. (2023). SQLite Home Page. SQLite. Available at:
+              https://www.sqlite.org/index.html (Accessed: 21 July 2023).
+            </p>
+          </div>
+        </div>
+      </section>
+      <!-- Main -->
+      <div id="main">
+        <!-- One -->
+
+        <!-- One -->
+
+        <!-- Contact -->
+        <section id="contact">
+          <div class="inner">
+            <section>
+              <form method="post" action="#">
+                <div class="fields">
+                  <div class="field half">
+                    <label for="name">Name</label>
+                    <input type="text" name="name" id="name" />
+                  </div>
+                  <div class="field half">
+                    <label for="email">Email</label>
+                    <input type="text" name="email" id="email" />
+                  </div>
+                  <div class="field">
+                    <label for="message">Message</label>
+                    <textarea name="message" id="message" rows="6"></textarea>
+                  </div>
+                </div>
+                <ul class="actions">
+                  <li>
+                    <input type="submit" value="Send Message" class="primary" />
+                  </li>
+                  <li><input type="reset" value="Clear" /></li>
+                </ul>
+              </form>
+            </section>
+            <section class="split">
+              <section>
+                <div class="contact-method">
+                  <span class="icon solid alt fa-envelope"></span>
+                  <h3>Email</h3>
+                  <a href="#">mail@haarismian.com</a>
+                </div>
+              </section>
+            </section>
+          </div>
+        </section>
+
+        <!-- Footer -->
+        <footer id="footer">
+          <div class="inner">
+            <ul class="icons">
+              <li></li>
+
+              <li>
+                <a
+                  href="https://github.com/haarismian"
+                  class="icon brands alt fa-github"
+                  ><span class="label">GitHub</span></a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://www.linkedin.com/in/haarismian/"
+                  class="icon brands alt fa-linkedin-in"
+                  ><span class="label">LinkedIn</span></a
+                >
+              </li>
+            </ul>
+            <ul class="copyright">
+              <li>&copy; Untitled</li>
+              <li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
+            </ul>
+          </div>
+        </footer>
+      </div>
+
+      <!-- Scripts -->
+      <script src="assets/js/jquery.min.js"></script>
+      <script src="assets/js/jquery.scrolly.min.js"></script>
+      <script src="assets/js/jquery.scrollex.min.js"></script>
+      <script src="assets/js/browser.min.js"></script>
+      <script src="assets/js/breakpoints.min.js"></script>
+      <script src="assets/js/util.js"></script>
+      <script src="assets/js/main.js"></script>
+    </div>
+  </body>
+</html>
