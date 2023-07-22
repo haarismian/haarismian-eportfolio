@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<!--
+	Forty by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+  <head>
+    <title>Unit 8</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, user-scalable=no"
+    />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript
+      ><link rel="stylesheet" href="assets/css/noscript.css"
+    /></noscript>
+  </head>
+  <body class="is-preload">
+    <!-- Wrapper -->
+    <div id="wrapper">
+      <!-- Header -->
+      <!-- Note: The "styleN" class below should match that of the banner element. -->
+      <header id="header" class="alt style2">
+        <a href="index.html" class="logo"
+          ><strong>Haaris</strong> <span>Mian</span></a
+        >
+        <nav>
+          <a href="#menu">Menu</a>
+        </nav>
+      </header>
+
+      <!-- Menu -->
+      <nav id="menu">
+        <ul class="links">
+          <li><a href="index.html">Home</a></li>
+          <li>
+            <a href="objectorientedprogramming.html"
+              >Object Oriented Programming</a
+            >
+          </li>
+          <li>
+            <a href="securesoftwaredevelopment.html"
+              >Secure Software Development</a
+            >
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Banner -->
+      <!-- Note: The "styleN" class below should match that of the header element. -->
+      <section id="banner" class="style2">
+        <div class="inner">
+          <span class="image">
+            <img src="images/pic07.jpg" alt="" />
+          </span>
+          <header class="major">
+            <h1>Unit 8</h1>
+          </header>
+          <div class="content">
+            <h2>Learning Objectives</h2>
+            <ul>
+              <li>
+                Understand and explain the principles, technology, and use of
+                cryptography, particularly in the context of operating systems.
+              </li>
+              <li>
+                Explore and describe common cryptographic libraries and the
+                issues encountered with them.
+              </li>
+              <li>
+                Analyze the pros and cons of using common cryptographic
+                libraries.
+              </li>
+              <li>
+                Develop a basic application that uses cryptographic libraries to
+                encode sample data.
+              </li>
+              <li>
+                Demonstrate the use of cryptographic libraries in a simple
+                application by integrating them effectively and explaining the
+                process.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Main -->
+      <div id="main">
+        <!-- One -->
+        <section id="one" class="spotlights">
+          <section>
+            <a href="generic.html" class="image">
+              <img
+                src="images/pic08.jpg"
+                alt=""
+                data-position="center center"
+              />
+            </a>
+            <div class="content">
+              <div class="inner">
+                <header class="major">
+                  <h3>
+                    Reflections of the activity and course learning objectives
+                  </h3>
+                </header>
+                <p>
+                  As a software engineer, this module on Cryptography and its
+                  use in Operating Systems aligns perfectly with my professional
+                  goals. With cyber threats and data breaches becoming
+                  increasingly prevalent, understanding the principles and
+                  technology behind cryptography is crucial. Through this
+                  module, I will gain comprehensive knowledge about various
+                  cryptographic libraries, how they can be applied to operating
+                  systems, and the challenges that one might encounter during
+                  this process. This knowledge will be beneficial when designing
+                  and implementing secure systems, helping me ensure that the
+                  software I develop is resilient against potential attacks. A
+                  practical example would be working on a project that requires
+                  secure data transmission; here, the encryption techniques I
+                  learn would be invaluable. For example in the group project it
+                  helped us select which type of database tool to use
+                </p>
+
+                <p>
+                  Additionally, the hands-on experience of creating a basic
+                  application using cryptographic libraries will help refine my
+                  programming and problem-solving skills. It's one thing to
+                  understand the theory of cryptography, but being able to apply
+                  it practically to software development is an entirely
+                  different ball game. Through this course, I'll have the
+                  opportunity to do just that. This skill set could be used, for
+                  example, in building an application that requires user
+                  authentication. Leveraging my knowledge from this module, I
+                  would be able to implement secure encryption for users'
+                  sensitive data such as passwords, providing an additional
+                  layer of security. All in all, the learning outcomes of this
+                  module will equip me with vital skills that will significantly
+                  enhance my capabilities as a software engineer.
+                </p>
+              </div>
+            </div>
+          </section>
+        </section>
+
+        <!-- One -->
+        <section id="one">
+          <div class="inner">
+            <header class="major">
+              <h2>e-Portfolio activities</h2>
+            </header>
+            <h2>
+              Create a python program that can take a text file and output an
+              encrypted version as a file in your folder on the system.
+            </h2>
+            <pre>
+              &lt;code&gt;
+              from cryptography.fernet import Fernet
+              import sys
+              
+              def generate_key():
+                  return Fernet.generate_key()
+              
+              def encrypt_file(file_name, key):
+                  fernet = Fernet(key)
+                  with open(file_name, 'rb') as file:
+                      original = file.read()
+                      
+                  encrypted = fernet.encrypt(original)
+                  
+                  with open(file_name + '.enc', 'wb') as encrypted_file:
+                      encrypted_file.write(encrypted)
+              
+              def main():
+                  key = generate_key()
+                  encrypt_file(sys.argv[1], key)
+              
+              if __name__ == "__main__":
+                  main()
+              &lt;/code&gt;
+              </pre
+            >
+            <h1>Why did you select the algorithm you chose?</h1>
+            <p>
+              I chose the Fernet symmetric encryption method because it is a
+              strong, high-level method provided by the cryptography library in
+              Python. Fernet guarantees that data encrypted using it cannot be
+              further manipulated or read without the key. It uses AES for
+              encryption and HMAC for authentication, providing a secure way to
+              handle encryption. I have also used this system of cryptography in
+              the group project as well.
+            </p>
+
+            <h1>Would it meet the GDPR regulations? Justify your answer.</h1>
+            <p>
+              Yes, using encryption to secure personal data is one of the
+              measures suggested by GDPR to ensure the safety and integrity of
+              personal data. Fernet, being a reliable and strong encryption
+              algorithm, would help in fulfilling this requirement. However,
+              it's important to remember that GDPR compliance is not only about
+              how data is encrypted, but also about how keys are managed, how
+              consent is obtained for data processing, how data subjects can
+              exercise their rights, and much more.
+            </p>
+          </div>
+        </section>
+
+        <!-- Contact -->
+        <section id="contact">
+          <div class="inner">
+            <section>
+              <form method="post" action="#">
+                <div class="fields">
+                  <div class="field half">
+                    <label for="name">Name</label>
+                    <input type="text" name="name" id="name" />
+                  </div>
+                  <div class="field half">
+                    <label for="email">Email</label>
+                    <input type="text" name="email" id="email" />
+                  </div>
+                  <div class="field">
+                    <label for="message">Message</label>
+                    <textarea name="message" id="message" rows="6"></textarea>
+                  </div>
+                </div>
+                <ul class="actions">
+                  <li>
+                    <input type="submit" value="Send Message" class="primary" />
+                  </li>
+                  <li><input type="reset" value="Clear" /></li>
+                </ul>
+              </form>
+            </section>
+            <section class="split">
+              <section>
+                <div class="contact-method">
+                  <span class="icon solid alt fa-envelope"></span>
+                  <h3>Email</h3>
+                  <a href="#">mail@haarismian.com</a>
+                </div>
+              </section>
+            </section>
+          </div>
+        </section>
+
+        <!-- Footer -->
+        <footer id="footer">
+          <div class="inner">
+            <ul class="icons">
+              <li></li>
+
+              <li>
+                <a
+                  href="https://github.com/haarismian"
+                  class="icon brands alt fa-github"
+                  ><span class="label">GitHub</span></a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://www.linkedin.com/in/haarismian/"
+                  class="icon brands alt fa-linkedin-in"
+                  ><span class="label">LinkedIn</span></a
+                >
+              </li>
+            </ul>
+            <ul class="copyright">
+              <li>&copy; Untitled</li>
+              <li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
+            </ul>
+          </div>
+        </footer>
+      </div>
+
+      <!-- Scripts -->
+      <script src="assets/js/jquery.min.js"></script>
+      <script src="assets/js/jquery.scrolly.min.js"></script>
+      <script src="assets/js/jquery.scrollex.min.js"></script>
+      <script src="assets/js/browser.min.js"></script>
+      <script src="assets/js/breakpoints.min.js"></script>
+      <script src="assets/js/util.js"></script>
+      <script src="assets/js/main.js"></script>
+    </div>
+  </body>
+</html>
